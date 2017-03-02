@@ -25,14 +25,18 @@ class App extends Component {
         YTSearch({
             key:YOUTUBE_API_KEY,
             term:term,
-            maxResults:8
+            maxResults:10
         },(videos)=>{
             this.setState({
                 videos:videos,
                 selectedVideo:videos[0]//set default video
             });
-            console.log(videos);
+            this.setTitle(videos[0].snippet.title);
         });
+    }
+
+    setTitle(txt_title){
+        document.title = txt_title;
     }
 
     render(){
@@ -59,7 +63,8 @@ class App extends Component {
                     <div className="col-md-4">
                         <VideoList
                             videos={this.state.videos}
-                            onVideoSelect={(selectedVideo)=>this.setState({selectedVideo})}/>
+                            onVideoSelect={(selectedVideo)=>{this.setState({selectedVideo});this.setTitle(selectedVideo.snippet.title);}}
+                            />
                     </div>
                 </div>
                 <div className="row">
