@@ -1,6 +1,6 @@
 # React youtube copy
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+you can demo [here](https://ninediy.github.io/youtube-reactjs/)
 
 ###Getting Started###
 
