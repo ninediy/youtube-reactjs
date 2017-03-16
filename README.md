@@ -11,7 +11,7 @@ Checkout this repo, install dependencies, then start the gulp process with the f
 
 ```
 	> git clone https://github.com/ninediy/youtubeCopy.git
-	> cd ReduxSimpleStarter
+	> cd youtubeCopy
 	> npm install
 	> npm start
 ```
